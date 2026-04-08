@@ -1,6 +1,6 @@
 # Applicert
 
-**Privacy-first verification systems built on query-based data access and verifiable credentials.**
+**Privacy-first verification built on Verifiable Minimal Disclosure (VMD).**
 
 ---
 
@@ -8,20 +8,26 @@
 
 Applicert is focused on a simple idea:
 
-> Verifiers should be able to ask questions of data — and receive verifiable answers — without exposing the underlying information.
+> Verifiers should be able to ask questions of data — and receive minimal, verifiable answers — without exposing the underlying information.
 
-This repository contains early work toward that model, centered around **Consent-Based Data Objects (CBDOs)**.
+This work introduces and explores a model called **Verifiable Minimal Disclosure (VMD)**.
 
 ---
 
-## CBDOs (Consent-Based Data Objects)
+## Verifiable Minimal Disclosure (VMD)
 
-CBDOs extend verifiable credentials into an interactive system:
+**Verifiable Minimal Disclosure (VMD)** is a model in which systems answer narrowly scoped questions by returning the smallest possible, verifiable result — without exposing underlying data.
+
+In practice, VMD systems function as:
+
+> **policy-enforced, query-responsive verification systems**
+
+Key characteristics:
 
 - Data remains under user control  
-- Verifiers submit constrained queries  
+- Verifiers submit constrained, question-based queries  
 - Responses are minimized (e.g. `true/false`, not raw data)  
-- Every interaction is governed by policy, consent, and audit  
+- Interactions are governed by policy, consent, and audit  
 
 This enables:
 
@@ -35,11 +41,12 @@ This enables:
 
 The first public reference implementation is now available:
 
-👉 **CBDO Core Engine (v0.1 pre-release)**  
-https://github.com/applicert/cbdo-core-engine
+👉 **VMD Core Engine (v0.1 pre-release)**  
+https://github.com/applicert/vmd-core-engine
 
 Includes:
-- Core Engine execution pipeline  
+
+- Core engine execution pipeline  
 - Query validation and replay protection  
 - Consent state machine  
 - Response minimization layer  
@@ -52,11 +59,11 @@ Includes:
 
 Most current systems require sharing full datasets to prove simple claims.
 
-CBDOs demonstrate an alternative:
+VMD demonstrates an alternative:
 
 - Ask only what you need  
 - Reveal only what is necessary  
-- Prove the result cryptographically  
+- Prove the result  
 
 ---
 
@@ -75,10 +82,11 @@ This is early-stage work:
 This work is being shared for **review and discussion**.
 
 If you have experience in:
-- Verifiable Credentials (W3C)
-- Decentralized Identity (DID)
-- Cryptography / ZK systems
-- Privacy-preserving architectures
+
+- Verifiable Credentials (W3C)  
+- Decentralized Identity (DID)  
+- Cryptography / ZK systems  
+- Privacy-preserving architectures  
 
 Your feedback is especially valuable.
 
@@ -86,11 +94,11 @@ Your feedback is especially valuable.
 
 ## Attribution
 
-The CBDO model and associated materials are released under CC0 (public domain dedication).
+The VMD model and associated materials are released under CC0 (public domain dedication).
 
 Attribution is not required, but appreciated:
 
-> "Consent-Based Data Objects (CBDOs), William Brian Williams / Applicert, 2026"
+> "Verifiable Minimal Disclosure (VMD), William Brian Williams / Applicert, 2026"
 
 ---
 
